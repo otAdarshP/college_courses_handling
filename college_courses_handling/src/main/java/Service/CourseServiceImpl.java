@@ -44,14 +44,13 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Course updateCourse (Course course){
+    public void updateCourse (Course course){
         list.forEach(element -> {
             if (element.getId() == course.getId()){
                 element.setName(course.getName());
                 element.setDetail(course.getDetail());
             }
         });
-        return course;
     }
 
     @Override
